@@ -91,10 +91,21 @@ github_service = GitHubService(github_token_handler, REPO_OWNER, REPO_NAME)
 # Определение баз данных
 databases = [
     Database("alkotestery ru", "alkotestery.csv", ',', [0, 1, 2], {0: "Телефон", 1: "Почта", 2: "Фио"}),
-    Database("skipk01122022", "skipk01122022.csv", ';', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 
-             {0: "ФИО", 1: "Рег номер", 2: "Статус", 3: "Дата рождения", 4: "Место рождения", 
-              5: "ИНН", 6: "СНИЛС", 7: "Почтовый адрес", 8: "Телефон", 9: "Почта", 10: "Ссылка"}),
-    # ... остальные базы данных остаются без изменений ...
+    Database("skipk01122022", "skipk01122022.csv", ';', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], {0: "ФИО", 1: "Рег номер", 2: "Статус", 3: "Дата рождения", 4: "Место рождения", 5: "ИНН", 6: "СНИЛС", 7: "Почтовый адрес", 8: "Телефон", 9: "Почта", 10: "Ссылка"}),
+    Database("9111ru", "9111ru.csv", ';', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], {0: "ФИО", 1: "Адрес местонахождения", 2: "Телефон", 3: "Почта", 4: "Специализация", 5: "Образование", 6: "Ватцап", 7: "О себе", 8: "Образование2", 9: "Фото", 10: "Ссылка"}),
+    Database("brovaryteplo", "Teplo_1.csv", ',', [0, 1, 2, 3, 4], {0: "LS", 1: "FIO", 2: "ADRES", 3: "UCHASTOK", 4: "DOLG_09_2019"}),
+    Database("salidru", "SALIDRU.csv", ';', [0, 1, 2], {0: "Почта", 1: "ФИ", 2: "Номер телефона"}),
+    Database("canada_invest_offers", "Canada_invest offers.csv", ',', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], {0: "First Name", 1: "Last Name", 2: "Email", 3: "Country", 4: "Prefix", 5: "Phone", 6: "Mobile Carrier", 7: "isValid", 8: "isActive", 9: "HLR_Location"}),
+    Database("eldent", "ELDENT.csv", '|', [0, 1, 2], {0: "ФИО", 1: "Номер телефона", 2: "Эл. почта"}),
+    Database("unqaqos", "unqaqos.csv", '|', [0, 1], {0: "Номер телефона", 1: "Дата рождения", 2: "ФИО"}),
+    Database("maxrealt", "maxrealt_ru_pars.csv", '|', [0], {0: "Номер", 1: "Продажи"}),
+    Database("agroserver", "agroserver_pars_02_24.csv", '|', [0, 1, 2, 3], {0: "Объявление", 1: "Адрес", 2: "ФИО", 3: "Телефон"}),
+    Database("vk_parsing", "vkParsingLostAndFound.csv", '|', [0, 2], {0: "Имя", 1: "Ссылка ВК", 2: "Телефон"}),
+    Database("food", "m-food_levelkitchen_p-food_sample.csv", ',', [15, 16, 17], {0: "Номер", 1: "Дата/время", 9: "Сумма", 10: "Валюта", 15: "E-Mail", 16: "Телефон", 17: "Имя", 14: "Адрес"}),
+    Database("food_v2", "m-food_levelkitchen_p-food_sample_1.csv", ',', [15, 16, 17], {0: "Номер", 1: "Дата/время", 9: "Сумма", 10: "Валюта", 15: "E-Mail", 16: "Телефон", 17: "Имя", 14: "Адрес"}),
+    Database("mirtesen", "mirtesen.csv", '|', [0, 1], {0: "Телефон", 1: "ФИО"}),
+    Database("undatos", "undatos.csv", ',', [0, 1], {0: "name", 1: "phone"}),
+    Database("tgpars", "tgpars.csv", ',', [0, 1, 2, 3], {0: "tg_username", 1: "tg_id", 2: "phone", 3: "date"}), 
 ]
 
 def format_result(result: Dict[str, str]) -> str:
