@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Database Viewer</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            flex-wrap: wrap;
+        }
+        .db-btn {
+            background-color: #00ff00;
+            color: #0a0a0a;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .db-btn:hover {
+            background-color: #00cc00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .info-container {
+            background-color: #1a1a1a;
+            border: 1px solid #00ff00;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .info-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        {{BUTTONS}}
+    </header>
+    <div class="container">
+        <div class="info-container" id="results-container">
+            <h2>Результаты поиска</h2>
+            {{RESULTS}}
+        </div>
+    </div>
+    <script>
+        function filterResults(dbType) {
+            const results = document.querySelectorAll('#results-container .info-item');
+            results.forEach(item => {
+                if (dbType === 'all' || item.dataset.type === dbType) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
