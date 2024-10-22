@@ -7,7 +7,7 @@ from html_generator import generate_html
 from typing import Optional, List, Dict
 
 # Константы
-API_TOKEN = '7067233375:AAEVxtJ91HWZfpttqTouMjTzX8JePKE8HkI'
+API_TOKEN = '7368730334:AAH9xUG8G_Ro8mvV_fDQxd5ddkwjxHnBoeg'
 ENCRYPTED_GITHUB_TOKEN = 'ᠸᠹᡂ_ᡡᠹᡣᡡ4ᡇᠼᡑ02ᡔᡃᡏᡡ2ᡜᠽᡦ0ᡦᡢ0ᡕᡛ8ᡥᠸᡥ6ᠸ1ᡟ790ᠸ'
 REPO_OWNER = 'rpfozzy'
 REPO_NAME = 'data5'
